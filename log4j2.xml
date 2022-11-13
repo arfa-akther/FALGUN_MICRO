@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<!-- folder name-->
+<Properties>
+    <Property name="filename">./logs</Property>
+  </Properties>
+	<Appenders>
+	<!-- we can specify any name here as abc or regression. Filename is : File pattern is the name in which new file will be created
+	fileName is the first file we create format -->
+		<RollingFile name="file" 
+		    fileName="${filename}/Logdemo.Log" 
+		    filePattern="${filename}/LogDemo-%d{HH-mm-ss-SSS}.Log">
+			<PatternLayout>
+			<!-- pattern in which the messages will appear in file-->
+				<pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 KB" /> <!-- Size for each file-->
+		</RollingFile>
+		<!-- here the name should be same as AppenderRef name-->
+		<Console name="ABC" target="SYSTEM_OUT">
+			<!-- we can change the pattern as we want to show in the message , example  HH:mm:ss.SSS we can change it to HH:mm:ss  -->
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<!-- Logger for specified pavckage-->
+		<!-- Suppose we want to specify the name as regression while performing regression testing and run the levels as info for this testing -->
+		<!-- If additivity is changed to true ,  messages from rcvDemo1 will appear twice, This is becaus
+		e the appender associated with logger is first used which writes the first instance to the 
+		Console. Next, the parent , which in this case is the root logger, is referenced. The event 
+		is then passed to its appender, which is also writes to the Console, resulting in the second 
+		instance-->
+		<Logger name="StepDefinitionSpring" level="trace" additivity="false">
+			<AppenderRef ref="file" />
+			<AppenderRef ref="ABC" />			
+		</Logger>
+		<!-- And the root will run the specified level for rest of the packgaes througout the 
+		project not mentioned in the logger tag-->
+		<Root level="trace">
+			<AppenderRef ref="ABC" />
+			<AppenderRef ref="file" />			
+		</Root>
+	</Loggers>
+</Configuration>
