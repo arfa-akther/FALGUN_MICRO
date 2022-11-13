@@ -43,7 +43,7 @@ public class base_class_spring {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\WebDriverSpring\\chromedriver.exe");
 			driver = new ChromeDriver();
-//			driverSpring.manage().deleteAllCookies();
+   //		driverSpring.manage().deleteAllCookies();
 			//driverSpring.get("http://automationpractice.com/index.php");
 			driver.manage().timeouts().pageLoadTimeout(testdataSpring.pageloadTimeoutS, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(testdataSpring.implicitlyWaitS, TimeUnit.SECONDS);
@@ -58,7 +58,7 @@ public class base_class_spring {
 
 		public static void getURLSPR (String URL) {
 			
-			driver.get(propspring.getProperty("URLSPR"));
+			driver.get(propspring.getProperty("URLSPR4"));
 			
 		}
 		

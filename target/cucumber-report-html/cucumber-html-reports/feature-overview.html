@@ -51,9 +51,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                5,
-                1,
-                4,
+                2,
+                0,
+                0,
                 0,
                 0
             ],
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -107,8 +107,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
-                1
+                1,
+                0
             ],
             backgroundColor: [
                 "#00B000",
@@ -157,8 +157,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   0,
-                   1
+                   1,
+                   0
                ],
                backgroundColor: [
                 "#00B000",
@@ -233,7 +233,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>com.spring</td>
                           <td>1</td>
-                        <td>15 Jul 2022, 17:23</td>
+                        <td>13 Nov 2022, 18:00</td>
           </tr>
         </tbody>
       </table>
@@ -323,50 +323,50 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="cartSpring-feature.html">This is to validate cartSpring functionality</a></td>
+        <td class="tagname"><a href="CalenderSouthwest-feature.html">This is to validate calender functionalty</a></td>
         
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
         <td class="total">1</td>
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >4</td>
+        <td      class="passed"    >2</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">10</td>
-        <td class="duration" data-value="28447438600">28s 447ms</td>
-        <td class="failed">Failed</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+        <td class="duration" data-value="13707959300">13s 707ms</td>
+        <td class="passed">Passed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
       <td>1</td>
-            <td>0</td>
+            <td>1</td>
+      <td>0</td>
       <td>1</td>
-      <td>1</td>
-      <td>5</td>
-      <td>1</td>
-      <td>4</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
-      <td>10</td>
-      <td class="duration">28s 447ms</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td class="duration">13s 707ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>0.00%</td>
-      <td>100.00%</td>
+            <td>100.00%</td>
+      <td>0.00%</td>
       <td></td>
-      <td>50.00%</td>
-      <td>10.00%</td>
-      <td>40.00%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
       <td></td>
-      <td>100.00%</td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

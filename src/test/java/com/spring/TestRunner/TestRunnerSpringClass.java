@@ -1,3 +1,4 @@
+/*Arfa Akther*/
 package com.spring.TestRunner;
 
 import org.testng.annotations.AfterTest;
@@ -10,8 +11,8 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = {"src/test/resourcesS/FeaturesSpring"} , //NEVER PUT SPACE AFTER 
 plugin = {"json:target/cucumber.json"},
-glue = "StepDefinitionSpring",tags= {"@cart"})
-
+glue = "StepDefinitionSpring",tags= {"@southeast"})
+//glue = "StepDefinitionSpring")
 
 public class TestRunnerSpringClass extends AbstractTestNGCucumberTests {
 	
@@ -29,6 +30,8 @@ public class TestRunnerSpringClass extends AbstractTestNGCucumberTests {
 		base_class_spring springObj = new base_class_spring();
 		springObj.driver.quit();	
 	}
+	
+	
 	
 
 }
